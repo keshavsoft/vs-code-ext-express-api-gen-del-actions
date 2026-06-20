@@ -29,7 +29,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <button onclick="Insert()" class="group bg-[#252526]
+                <button onclick="Delete()" class="group bg-[#252526]
                     border border-gray-700
                     rounded-xl p-5 text-left
                     hover:border-blue-500
@@ -38,68 +38,15 @@
                     <div class="text-2xl mb-2">🔢</div>
 
                     <div class="font-medium">
-                        insert
+                        delete
                     </div>
 
                     <div class="text-sm text-gray-400">
-                        insert as is using lowdb
+                        delete from pk using lowdb
                     </div>
                 </button>
 
-                <button onclick="InsertAsIs()" class="group bg-[#252526]
-                    border border-gray-700
-                    rounded-xl p-5 text-left
-                    hover:border-blue-500
-                    hover:bg-[#2d2d30]
-                    transition-all">
-                    <div class="text-2xl mb-2">🔢</div>
-
-                    <div class="font-medium">
-                        insertGenPk
-                    </div>
-
-                    <div class="text-sm text-gray-400">
-                        find using lowdb
-                    </div>
-                </button>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <button onclick="Insert()" class="group bg-[#252526]
-                    border border-gray-700
-                    rounded-xl p-5 text-left
-                    hover:border-blue-500
-                    hover:bg-[#2d2d30]
-                    transition-all">
-                    <div class="text-2xl mb-2">🔢</div>
-
-                    <div class="font-medium">
-                        insert
-                    </div>
-
-                    <div class="text-sm text-gray-400">
-                        insert as is using lowdb
-                    </div>
-                </button>
-
-                <button onclick="WithMail()" class="group bg-[#252526]
-                    border border-gray-700
-                    rounded-xl p-5 text-left
-                    hover:border-blue-500
-                    hover:bg-[#2d2d30]
-                    transition-all">
-                    <div class="text-2xl mb-2">🔢</div>
-
-                    <div class="font-medium">
-                        WithMail
-                    </div>
-
-                    <div class="text-sm text-gray-400">
-                        WithMail using lowdb and gmail from env
-                    </div>
-                </button>
-            </div>
-
         </div>
 
         <!-- Status -->
@@ -116,21 +63,9 @@
     <script>
         const vscode = acquireVsCodeApi();
 
-        function Insert() {
+        function Delete() {
             vscode.postMessage({
-                action: "Insert"
-            });
-        };
-
-        function InsertAsIs() {
-            vscode.postMessage({
-                action: "InsertAsIs"
-            });
-        };
-
-        function WithMail() {
-            vscode.postMessage({
-                action: "WithMail"
+                action: "Delete"
             });
         };
 
