@@ -16,7 +16,7 @@ const splitEditor = async (context, uri) => {
 
     panel.webview.onDidReceiveMessage(
         (message) => {
-            if (message.action === "Del") {
+            if (message.action === "DeleteAction") {
                 DeleteAction({ uri });
             };
         }
